@@ -1,0 +1,86 @@
+📦 files 🏠
+
+🏁 🍇
+
+    💭 get nth digit of number 
+    🍇number🔢index🔢➡️🔢
+        💭(a / 10^(b - 1)) % 10;
+        ↩️number➗🔢🏂10.0 💯index ➖ 1❗️❗️❗️ 🚮 10
+    🍉➡️get_nth_digit
+
+    💭 get the size of the greatest number 
+    🍇collection 🍨🐚🔡🍆 ➡️🔢
+
+        0 ➡️ 🖍🆕size
+        🔂 item collection 🍇
+            📐item❗➡️tmp
+            ↪️tmp▶️size🍇
+                tmp ➡️🖍size
+            🍉
+        🍉
+        ↩️size
+    🍉➡️get_max_size
+
+
+    🎞🐇💻❗️ ➡️ args
+    ↪️ ❎📏args❓ 🙌 2 ❗🍇
+        😀🔤Usage ./radix <filename>🔤❗
+        😀🔤File must contain space separated list of integers🔤❗
+        🚪🐇💻1❗
+    🍉
+
+    💭 reads in file into file_data
+    🆗file_data 📇🐇📄🐽args 1❗❗🍇
+        💭😀 🍺🔡file_data❗❗
+        🔫🍺🔡file_data❗ 🔤 🔤❗ ➡️ 🖍🆕number_list
+
+        ⁉️ get_max_size number_list❗ ➡️ max_size
+        😀 🔤longest number:🧲max_size🧲🔤 ❗
+
+        💭iterate over the digits of the numbers
+        🔂i 🆕⏩1 max_size➕1 1 ❗️ 🍇
+
+            💭count sort
+
+            🍿0 0 0 0 0 0 0 0 0 0🍆 ➡️ 🖍🆕counts
+            🔂 number number_list 🍇
+                ⁉️ get_nth_digit 🍺🔢number 10❗️ i ❗️ ➡️ digit_at_n
+                🐽counts digit_at_n❗️ ➕ 1 ➡️ 🐽counts digit_at_n❗️
+            🍉
+
+            🔂j 🆕⏩1 10 ❗️ 🍇
+                🐽counts j ❗️ ➕ 🐽counts j ➖ 1 ❗️ ➡️ 🐽counts j ❗️
+            🍉
+            🔂j 🆕⏩9 0 ❗️ 🍇
+                🐽counts j ➖ 1 ❗️ ➡️🐽counts j ❗️
+            🍉
+            0 ➡️ 🐽counts 0❗️
+
+            📏number_list❓ ➡️ len
+
+            🆕🍨🐚🔡🍆🔤🔤 len❗ ➡️🖍🆕tmp_list
+            
+            🔂 number number_list 🍇
+                ⁉️ get_nth_digit 🍺🔢number 10❗️ i ❗️ ➡️ digit_at_n
+                ↪️ digit_at_n ◀️ len🍇
+                    number➡️🐽tmp_list 🐽counts digit_at_n❗️❗️
+                    🐽counts digit_at_n❗️ ➕ 1➡️🐽counts digit_at_n❗️
+                🍉
+            🍉
+
+            tmp_list ➡️🖍number_list
+
+        🍉
+
+        🔂 number number_list 🍇
+            👄 🔤🧲number🧲 🔤❗
+        🍉
+        😀 🔤🔤 ❗
+
+    🍉
+    🙅 error 🍇
+        😀 🔤An error occured: 🧲💬error❗️🧲🔤❗️
+        🚪🐇💻1❗
+    🍉
+
+🍉
